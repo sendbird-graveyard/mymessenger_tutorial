@@ -41,55 +41,12 @@
 
 - (void) startJiver
 {
-    [Jiver loginWithUserId:[Jiver deviceUniqueID] andUserName:[MyUtils getUserName] andUserImageUrl:[MyUtils getUserProfileImage] andAccessToken:@""];
-    [Jiver registerNotificationHandlerMessagingChannelUpdatedBlock:^(JiverMessagingChannel *channel) {
-        for (JiverMessagingChannel *oldChannel in channelArray) {
-            if ([oldChannel getId] == [channel getId]) {
-                [channelArray removeObject:oldChannel];
-                break;
-            }
-        }
-        [channelArray insertObject:channel atIndex:0];
-        [self.messagingChannelListTableView reloadData];
-    }
-    mentionUpdatedBlock:^(JiverMention *mention) {
-
-    }];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        messagingChannelListQuery = [Jiver queryMessagingChannelList];
-        [messagingChannelListQuery setLimit:15];
-        if ([messagingChannelListQuery hasNext]) {
-            [messagingChannelListQuery nextWithResultBlock:^(NSMutableArray *queryResult) {
-                [channelArray removeAllObjects];
-                [channelArray addObjectsFromArray:queryResult];
-                [self.messagingChannelListTableView reloadData];
-            } endBlock:^(NSInteger code) {
-                
-            }];
-        }
-        [Jiver joinChannel:@""];
-        [Jiver connect];
-    });
+    // See 'How to build an iOS messaging app'
 }
 
 - (void)loadNextChannelList
 {
-    if (isLoadingChannel) {
-        return;
-    }
-    isLoadingChannel = YES;
-    
-    if ([messagingChannelListQuery hasNext]) {
-        [messagingChannelListQuery nextWithResultBlock:^(NSMutableArray *queryResult) {
-            [channelArray addObjectsFromArray:queryResult];
-            [self.messagingChannelListTableView reloadData];
-            
-            isLoadingChannel = NO;
-        } endBlock:^(NSInteger code) {
-            isLoadingChannel = NO;
-        }];
-    }
+    // See 'How to build an iOS messaging app'
 }
 
 #pragma mark - Navigation
@@ -146,13 +103,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    JiverMessagingChannel *channel = (JiverMessagingChannel *)[channelArray objectAtIndex:[indexPath row]];
-    
-    UIStoryboard *storyboard = [self storyboard];
-    MessagingViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MessagingViewController"];
-    [vc setMessagingChannel:channel];
-    [vc setDelegate:self];
-    [self presentViewController:vc animated:YES completion:nil];
+    // See 'How to build an iOS messaging app'
 }
 
 #pragma mark - MessagingViewControllerDelegate
