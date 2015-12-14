@@ -1,0 +1,1 @@
+../../../../JiverSDK/JiverSDK.framework/Headers/JiverStructuredMessage.h

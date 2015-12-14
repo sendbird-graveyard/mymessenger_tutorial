@@ -1,0 +1,997 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A1620111C19193400A5B449 /* MessagingInviteSelectChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1620101C19193400A5B449 /* MessagingInviteSelectChannelViewController.m */; };
+		5A1620151C191A0C00A5B449 /* MessagingInviteChannelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1620141C191A0C00A5B449 /* MessagingInviteChannelTableViewCell.m */; };
+		5A16201B1C19238200A5B449 /* MessagingInviteSelectUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A16201A1C19238200A5B449 /* MessagingInviteSelectUserTableViewCell.m */; };
+		5A16201E1C19597800A5B449 /* MessagingInviteSelectUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A16201D1C19597800A5B449 /* MessagingInviteSelectUserViewController.m */; };
+		5A1620211C1A4F9400A5B449 /* MessagingMembersInChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1620201C1A4F9400A5B449 /* MessagingMembersInChannelViewController.m */; };
+		5A1620241C1A509F00A5B449 /* MessagingMemberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1620231C1A509F00A5B449 /* MessagingMemberTableViewCell.m */; };
+		5A2A307A1C1C321C003CF402 /* MessagingEditChannelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A30791C1C321C003CF402 /* MessagingEditChannelListViewController.m */; };
+		5A2A307E1C1C3975003CF402 /* MessagingEditListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A307D1C1C3975003CF402 /* MessagingEditListTableViewCell.m */; };
+		5AA885211C132BEC00876815 /* MessagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA885201C132BEC00876815 /* MessagingViewController.m */; };
+		5AA885291C143DEF00876815 /* MessagingChannelListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA885281C143DEF00876815 /* MessagingChannelListTableViewCell.m */; };
+		5AA8852D1C14523800876815 /* MyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8852C1C14523800876815 /* MyUtils.m */; };
+		5AA885301C1467B000876815 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8852F1C1467B000876815 /* MainTabBarViewController.m */; };
+		5AA885331C14749000876815 /* MessagingMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA885321C14749000876815 /* MessagingMessageTableViewCell.m */; };
+		5AA885361C1474A100876815 /* MessagingBroadcastMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA885351C1474A100876815 /* MessagingBroadcastMessageTableViewCell.m */; };
+		5AA885391C1474B500876815 /* MessagingSystemMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA885381C1474B500876815 /* MessagingSystemMessageTableViewCell.m */; };
+		5AA8853C1C14FAF900876815 /* OpenChatFileMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8853B1C14FAF900876815 /* OpenChatFileMessageTableViewCell.m */; };
+		5AA8853F1C15094600876815 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8853E1C15094600876815 /* SettingsViewController.m */; };
+		5AA885411C15AAAB00876815 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA885401C15AAAB00876815 /* MobileCoreServices.framework */; };
+		5AA885461C17D61000876815 /* MessagingOpponentMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA885451C17D61000876815 /* MessagingOpponentMessageTableViewCell.m */; };
+		5AA885491C1822A700876815 /* MessagingFileLinkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA885481C1822A700876815 /* MessagingFileLinkTableViewCell.m */; };
+		5AA8854C1C18270900876815 /* MessageOpponentFileLinkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8854B1C18270900876815 /* MessageOpponentFileLinkTableViewCell.m */; };
+		5AD59F3F1C115E50001A93B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD59F3E1C115E50001A93B2 /* main.m */; };
+		5AD59F421C115E50001A93B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD59F411C115E50001A93B2 /* AppDelegate.m */; };
+		5AD59F451C115E50001A93B2 /* OpenChatChannelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD59F441C115E50001A93B2 /* OpenChatChannelListViewController.m */; };
+		5AD59F481C115E50001A93B2 /* MessagingChannelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD59F471C115E50001A93B2 /* MessagingChannelListViewController.m */; };
+		5AD59F4B1C115E50001A93B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD59F491C115E50001A93B2 /* Main.storyboard */; };
+		5AD59F4D1C115E50001A93B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD59F4C1C115E50001A93B2 /* Assets.xcassets */; };
+		5AD59F501C115E50001A93B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD59F4E1C115E50001A93B2 /* LaunchScreen.storyboard */; };
+		5AD59F5B1C115E50001A93B2 /* MyMessengerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD59F5A1C115E50001A93B2 /* MyMessengerTests.m */; };
+		5AD59F661C115E50001A93B2 /* MyMessengerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD59F651C115E50001A93B2 /* MyMessengerUITests.m */; };
+		5AD59F791C116348001A93B2 /* OpenChatChannelListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD59F781C116348001A93B2 /* OpenChatChannelListTableViewCell.m */; };
+		5AD59F7C1C1172E3001A93B2 /* OpenChatChattingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD59F7B1C1172E3001A93B2 /* OpenChatChattingViewController.m */; };
+		5AD59F801C117B8F001A93B2 /* OpenChatMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD59F7F1C117B8F001A93B2 /* OpenChatMessageTableViewCell.m */; };
+		5AD59F821C119516001A93B2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD59F811C119516001A93B2 /* QuartzCore.framework */; };
+		5AD59F851C11C2C2001A93B2 /* OpenChatBroadcastTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD59F841C11C2C2001A93B2 /* OpenChatBroadcastTableViewCell.m */; };
+		C4FDB06B6DDC029396CA6EDE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C484DAAD0114911E007BD7 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AD59F571C115E50001A93B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AD59F321C115E50001A93B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AD59F391C115E50001A93B2;
+			remoteInfo = MyMessenger;
+		};
+		5AD59F621C115E50001A93B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AD59F321C115E50001A93B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AD59F391C115E50001A93B2;
+			remoteInfo = MyMessenger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		36BE752DA96845DA9778FD63 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5348D85D6836B043DC6CCAB8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5A16200F1C19193400A5B449 /* MessagingInviteSelectChannelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingInviteSelectChannelViewController.h; sourceTree = "<group>"; };
+		5A1620101C19193400A5B449 /* MessagingInviteSelectChannelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingInviteSelectChannelViewController.m; sourceTree = "<group>"; };
+		5A1620131C191A0C00A5B449 /* MessagingInviteChannelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingInviteChannelTableViewCell.h; sourceTree = "<group>"; };
+		5A1620141C191A0C00A5B449 /* MessagingInviteChannelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingInviteChannelTableViewCell.m; sourceTree = "<group>"; };
+		5A1620191C19238200A5B449 /* MessagingInviteSelectUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingInviteSelectUserTableViewCell.h; sourceTree = "<group>"; };
+		5A16201A1C19238200A5B449 /* MessagingInviteSelectUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingInviteSelectUserTableViewCell.m; sourceTree = "<group>"; };
+		5A16201C1C19597800A5B449 /* MessagingInviteSelectUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingInviteSelectUserViewController.h; sourceTree = "<group>"; };
+		5A16201D1C19597800A5B449 /* MessagingInviteSelectUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingInviteSelectUserViewController.m; sourceTree = "<group>"; };
+		5A16201F1C1A4F9400A5B449 /* MessagingMembersInChannelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingMembersInChannelViewController.h; sourceTree = "<group>"; };
+		5A1620201C1A4F9400A5B449 /* MessagingMembersInChannelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingMembersInChannelViewController.m; sourceTree = "<group>"; };
+		5A1620221C1A509F00A5B449 /* MessagingMemberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingMemberTableViewCell.h; sourceTree = "<group>"; };
+		5A1620231C1A509F00A5B449 /* MessagingMemberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingMemberTableViewCell.m; sourceTree = "<group>"; };
+		5A2A30781C1C321C003CF402 /* MessagingEditChannelListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingEditChannelListViewController.h; sourceTree = "<group>"; };
+		5A2A30791C1C321C003CF402 /* MessagingEditChannelListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingEditChannelListViewController.m; sourceTree = "<group>"; };
+		5A2A307C1C1C3975003CF402 /* MessagingEditListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingEditListTableViewCell.h; sourceTree = "<group>"; };
+		5A2A307D1C1C3975003CF402 /* MessagingEditListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingEditListTableViewCell.m; sourceTree = "<group>"; };
+		5AA8851F1C132BEC00876815 /* MessagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingViewController.h; sourceTree = "<group>"; };
+		5AA885201C132BEC00876815 /* MessagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingViewController.m; sourceTree = "<group>"; };
+		5AA885271C143DEF00876815 /* MessagingChannelListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingChannelListTableViewCell.h; sourceTree = "<group>"; };
+		5AA885281C143DEF00876815 /* MessagingChannelListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingChannelListTableViewCell.m; sourceTree = "<group>"; };
+		5AA8852B1C14523800876815 /* MyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUtils.h; sourceTree = "<group>"; };
+		5AA8852C1C14523800876815 /* MyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUtils.m; sourceTree = "<group>"; };
+		5AA8852E1C1467B000876815 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		5AA8852F1C1467B000876815 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		5AA885311C14749000876815 /* MessagingMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingMessageTableViewCell.h; sourceTree = "<group>"; };
+		5AA885321C14749000876815 /* MessagingMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingMessageTableViewCell.m; sourceTree = "<group>"; };
+		5AA885341C1474A100876815 /* MessagingBroadcastMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingBroadcastMessageTableViewCell.h; sourceTree = "<group>"; };
+		5AA885351C1474A100876815 /* MessagingBroadcastMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingBroadcastMessageTableViewCell.m; sourceTree = "<group>"; };
+		5AA885371C1474B500876815 /* MessagingSystemMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingSystemMessageTableViewCell.h; sourceTree = "<group>"; };
+		5AA885381C1474B500876815 /* MessagingSystemMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingSystemMessageTableViewCell.m; sourceTree = "<group>"; };
+		5AA8853A1C14FAF900876815 /* OpenChatFileMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenChatFileMessageTableViewCell.h; sourceTree = "<group>"; };
+		5AA8853B1C14FAF900876815 /* OpenChatFileMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenChatFileMessageTableViewCell.m; sourceTree = "<group>"; };
+		5AA8853D1C15094600876815 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		5AA8853E1C15094600876815 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		5AA885401C15AAAB00876815 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		5AA885441C17D61000876815 /* MessagingOpponentMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingOpponentMessageTableViewCell.h; sourceTree = "<group>"; };
+		5AA885451C17D61000876815 /* MessagingOpponentMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingOpponentMessageTableViewCell.m; sourceTree = "<group>"; };
+		5AA885471C1822A700876815 /* MessagingFileLinkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingFileLinkTableViewCell.h; sourceTree = "<group>"; };
+		5AA885481C1822A700876815 /* MessagingFileLinkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingFileLinkTableViewCell.m; sourceTree = "<group>"; };
+		5AA8854A1C18270900876815 /* MessageOpponentFileLinkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageOpponentFileLinkTableViewCell.h; sourceTree = "<group>"; };
+		5AA8854B1C18270900876815 /* MessageOpponentFileLinkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageOpponentFileLinkTableViewCell.m; sourceTree = "<group>"; };
+		5AD59F3A1C115E50001A93B2 /* MyMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD59F3E1C115E50001A93B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AD59F401C115E50001A93B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5AD59F411C115E50001A93B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5AD59F431C115E50001A93B2 /* OpenChatChannelListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenChatChannelListViewController.h; sourceTree = "<group>"; };
+		5AD59F441C115E50001A93B2 /* OpenChatChannelListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenChatChannelListViewController.m; sourceTree = "<group>"; };
+		5AD59F461C115E50001A93B2 /* MessagingChannelListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagingChannelListViewController.h; sourceTree = "<group>"; };
+		5AD59F471C115E50001A93B2 /* MessagingChannelListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagingChannelListViewController.m; sourceTree = "<group>"; };
+		5AD59F4A1C115E50001A93B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5AD59F4C1C115E50001A93B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5AD59F4F1C115E50001A93B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5AD59F511C115E50001A93B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD59F561C115E50001A93B2 /* MyMessengerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMessengerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD59F5A1C115E50001A93B2 /* MyMessengerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMessengerTests.m; sourceTree = "<group>"; };
+		5AD59F5C1C115E50001A93B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD59F611C115E50001A93B2 /* MyMessengerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMessengerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD59F651C115E50001A93B2 /* MyMessengerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMessengerUITests.m; sourceTree = "<group>"; };
+		5AD59F671C115E50001A93B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD59F771C116348001A93B2 /* OpenChatChannelListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenChatChannelListTableViewCell.h; sourceTree = "<group>"; };
+		5AD59F781C116348001A93B2 /* OpenChatChannelListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenChatChannelListTableViewCell.m; sourceTree = "<group>"; };
+		5AD59F7A1C1172E3001A93B2 /* OpenChatChattingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenChatChattingViewController.h; sourceTree = "<group>"; };
+		5AD59F7B1C1172E3001A93B2 /* OpenChatChattingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenChatChattingViewController.m; sourceTree = "<group>"; };
+		5AD59F7E1C117B8F001A93B2 /* OpenChatMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenChatMessageTableViewCell.h; sourceTree = "<group>"; };
+		5AD59F7F1C117B8F001A93B2 /* OpenChatMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenChatMessageTableViewCell.m; sourceTree = "<group>"; };
+		5AD59F811C119516001A93B2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5AD59F831C11C2C2001A93B2 /* OpenChatBroadcastTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenChatBroadcastTableViewCell.h; sourceTree = "<group>"; };
+		5AD59F841C11C2C2001A93B2 /* OpenChatBroadcastTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenChatBroadcastTableViewCell.m; sourceTree = "<group>"; };
+		C8C484DAAD0114911E007BD7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AD59F371C115E50001A93B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AA885411C15AAAB00876815 /* MobileCoreServices.framework in Frameworks */,
+				5AD59F821C119516001A93B2 /* QuartzCore.framework in Frameworks */,
+				C4FDB06B6DDC029396CA6EDE /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD59F531C115E50001A93B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD59F5E1C115E50001A93B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12F0FD0292F37AE594533376 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5348D85D6836B043DC6CCAB8 /* Pods.debug.xcconfig */,
+				36BE752DA96845DA9778FD63 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A1620121C1919C800A5B449 /* MessagingInvite */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A308D1C1C51FB003CF402 /* MessagingInviteViewController */,
+			);
+			name = MessagingInvite;
+			sourceTree = "<group>";
+		};
+		5A2A307B1C1C3947003CF402 /* MessagingEditList */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A308A1C1C51A9003CF402 /* MessagingEditListViewController */,
+			);
+			name = MessagingEditList;
+			sourceTree = "<group>";
+		};
+		5A2A307F1C1C5062003CF402 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				5AA8852E1C1467B000876815 /* MainTabBarViewController.h */,
+				5AA8852F1C1467B000876815 /* MainTabBarViewController.m */,
+			);
+			name = MainTab;
+			sourceTree = "<group>";
+		};
+		5A2A30801C1C507E003CF402 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5AA8853D1C15094600876815 /* SettingsViewController.h */,
+				5AA8853E1C15094600876815 /* SettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		5A2A30811C1C5095003CF402 /* OpenChatChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30821C1C50A3003CF402 /* ChannelListViewController */,
+			);
+			name = OpenChatChannelList;
+			sourceTree = "<group>";
+		};
+		5A2A30821C1C50A3003CF402 /* ChannelListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30831C1C50BC003CF402 /* ViewCell */,
+				5AD59F431C115E50001A93B2 /* OpenChatChannelListViewController.h */,
+				5AD59F441C115E50001A93B2 /* OpenChatChannelListViewController.m */,
+			);
+			name = ChannelListViewController;
+			sourceTree = "<group>";
+		};
+		5A2A30831C1C50BC003CF402 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5AD59F771C116348001A93B2 /* OpenChatChannelListTableViewCell.h */,
+				5AD59F781C116348001A93B2 /* OpenChatChannelListTableViewCell.m */,
+			);
+			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		5A2A30841C1C50EC003CF402 /* ChattingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30851C1C5110003CF402 /* ViewCell */,
+				5AD59F7A1C1172E3001A93B2 /* OpenChatChattingViewController.h */,
+				5AD59F7B1C1172E3001A93B2 /* OpenChatChattingViewController.m */,
+			);
+			name = ChattingViewController;
+			sourceTree = "<group>";
+		};
+		5A2A30851C1C5110003CF402 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5AD59F7E1C117B8F001A93B2 /* OpenChatMessageTableViewCell.h */,
+				5AD59F7F1C117B8F001A93B2 /* OpenChatMessageTableViewCell.m */,
+				5AD59F831C11C2C2001A93B2 /* OpenChatBroadcastTableViewCell.h */,
+				5AD59F841C11C2C2001A93B2 /* OpenChatBroadcastTableViewCell.m */,
+				5AA8853A1C14FAF900876815 /* OpenChatFileMessageTableViewCell.h */,
+				5AA8853B1C14FAF900876815 /* OpenChatFileMessageTableViewCell.m */,
+			);
+			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		5A2A30861C1C512C003CF402 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5AA8852B1C14523800876815 /* MyUtils.h */,
+				5AA8852C1C14523800876815 /* MyUtils.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		5A2A30871C1C5143003CF402 /* MessagingChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30881C1C5167003CF402 /* MessagingChannelListViewController */,
+			);
+			name = MessagingChannelList;
+			sourceTree = "<group>";
+		};
+		5A2A30881C1C5167003CF402 /* MessagingChannelListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30891C1C5182003CF402 /* ViewCell */,
+				5AD59F461C115E50001A93B2 /* MessagingChannelListViewController.h */,
+				5AD59F471C115E50001A93B2 /* MessagingChannelListViewController.m */,
+			);
+			name = MessagingChannelListViewController;
+			sourceTree = "<group>";
+		};
+		5A2A30891C1C5182003CF402 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5AA885271C143DEF00876815 /* MessagingChannelListTableViewCell.h */,
+				5AA885281C143DEF00876815 /* MessagingChannelListTableViewCell.m */,
+			);
+			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		5A2A308A1C1C51A9003CF402 /* MessagingEditListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A308B1C1C51B6003CF402 /* ViewController */,
+			);
+			name = MessagingEditListViewController;
+			sourceTree = "<group>";
+		};
+		5A2A308B1C1C51B6003CF402 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A308C1C1C51C2003CF402 /* ViewCell */,
+				5A2A30781C1C321C003CF402 /* MessagingEditChannelListViewController.h */,
+				5A2A30791C1C321C003CF402 /* MessagingEditChannelListViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		5A2A308C1C1C51C2003CF402 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A307C1C1C3975003CF402 /* MessagingEditListTableViewCell.h */,
+				5A2A307D1C1C3975003CF402 /* MessagingEditListTableViewCell.m */,
+			);
+			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		5A2A308D1C1C51FB003CF402 /* MessagingInviteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30901C1C5238003CF402 /* SelectUser */,
+				5A2A308F1C1C522D003CF402 /* SelectChannel */,
+			);
+			name = MessagingInviteViewController;
+			sourceTree = "<group>";
+		};
+		5A2A308F1C1C522D003CF402 /* SelectChannel */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30921C1C5254003CF402 /* ViewCell */,
+				5A16200F1C19193400A5B449 /* MessagingInviteSelectChannelViewController.h */,
+				5A1620101C19193400A5B449 /* MessagingInviteSelectChannelViewController.m */,
+			);
+			name = SelectChannel;
+			sourceTree = "<group>";
+		};
+		5A2A30901C1C5238003CF402 /* SelectUser */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30911C1C524A003CF402 /* ViewCell */,
+				5A16201C1C19597800A5B449 /* MessagingInviteSelectUserViewController.h */,
+				5A16201D1C19597800A5B449 /* MessagingInviteSelectUserViewController.m */,
+			);
+			name = SelectUser;
+			sourceTree = "<group>";
+		};
+		5A2A30911C1C524A003CF402 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A1620191C19238200A5B449 /* MessagingInviteSelectUserTableViewCell.h */,
+				5A16201A1C19238200A5B449 /* MessagingInviteSelectUserTableViewCell.m */,
+			);
+			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		5A2A30921C1C5254003CF402 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A1620131C191A0C00A5B449 /* MessagingInviteChannelTableViewCell.h */,
+				5A1620141C191A0C00A5B449 /* MessagingInviteChannelTableViewCell.m */,
+			);
+			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		5A2A30931C1C5270003CF402 /* MessagingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5AA8851F1C132BEC00876815 /* MessagingViewController.h */,
+				5AA885201C132BEC00876815 /* MessagingViewController.m */,
+				5A2A30941C1C5278003CF402 /* ViewCell */,
+			);
+			name = MessagingViewController;
+			sourceTree = "<group>";
+		};
+		5A2A30941C1C5278003CF402 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5AA885311C14749000876815 /* MessagingMessageTableViewCell.h */,
+				5AA885321C14749000876815 /* MessagingMessageTableViewCell.m */,
+				5AA885341C1474A100876815 /* MessagingBroadcastMessageTableViewCell.h */,
+				5AA885351C1474A100876815 /* MessagingBroadcastMessageTableViewCell.m */,
+				5AA885371C1474B500876815 /* MessagingSystemMessageTableViewCell.h */,
+				5AA885381C1474B500876815 /* MessagingSystemMessageTableViewCell.m */,
+				5AA885441C17D61000876815 /* MessagingOpponentMessageTableViewCell.h */,
+				5AA885451C17D61000876815 /* MessagingOpponentMessageTableViewCell.m */,
+				5AA885471C1822A700876815 /* MessagingFileLinkTableViewCell.h */,
+				5AA885481C1822A700876815 /* MessagingFileLinkTableViewCell.m */,
+				5AA8854A1C18270900876815 /* MessageOpponentFileLinkTableViewCell.h */,
+				5AA8854B1C18270900876815 /* MessageOpponentFileLinkTableViewCell.m */,
+			);
+			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		5A2A30951C1C58DA003CF402 /* MessagingMemberListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30961C1C58EF003CF402 /* ViewCell */,
+				5A16201F1C1A4F9400A5B449 /* MessagingMembersInChannelViewController.h */,
+				5A1620201C1A4F9400A5B449 /* MessagingMembersInChannelViewController.m */,
+			);
+			name = MessagingMemberListViewController;
+			sourceTree = "<group>";
+		};
+		5A2A30961C1C58EF003CF402 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A1620221C1A509F00A5B449 /* MessagingMemberTableViewCell.h */,
+				5A1620231C1A509F00A5B449 /* MessagingMemberTableViewCell.m */,
+			);
+			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		5AA885231C143D9B00876815 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30951C1C58DA003CF402 /* MessagingMemberListViewController */,
+				5A2A30931C1C5270003CF402 /* MessagingViewController */,
+			);
+			name = Messaging;
+			sourceTree = "<group>";
+		};
+		5AD59F311C115E50001A93B2 = {
+			isa = PBXGroup;
+			children = (
+				A0305F9F44B9A73A3C08E3CC /* Frameworks */,
+				5AD59F3C1C115E50001A93B2 /* MyMessenger */,
+				5AD59F591C115E50001A93B2 /* MyMessengerTests */,
+				5AD59F641C115E50001A93B2 /* MyMessengerUITests */,
+				12F0FD0292F37AE594533376 /* Pods */,
+				5AD59F3B1C115E50001A93B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AD59F3B1C115E50001A93B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AD59F3A1C115E50001A93B2 /* MyMessenger.app */,
+				5AD59F561C115E50001A93B2 /* MyMessengerTests.xctest */,
+				5AD59F611C115E50001A93B2 /* MyMessengerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AD59F3C1C115E50001A93B2 /* MyMessenger */ = {
+			isa = PBXGroup;
+			children = (
+				5AD59F401C115E50001A93B2 /* AppDelegate.h */,
+				5AD59F411C115E50001A93B2 /* AppDelegate.m */,
+				5AD59F4C1C115E50001A93B2 /* Assets.xcassets */,
+				5A2A30861C1C512C003CF402 /* Common */,
+				5AD59F511C115E50001A93B2 /* Info.plist */,
+				5AD59F4E1C115E50001A93B2 /* LaunchScreen.storyboard */,
+				5AD59F491C115E50001A93B2 /* Main.storyboard */,
+				5A2A307F1C1C5062003CF402 /* MainTab */,
+				5AD59F741C115EC4001A93B2 /* Messaging */,
+				5AD59F731C115EB7001A93B2 /* OpenChat */,
+				5A2A30801C1C507E003CF402 /* Settings */,
+				5AD59F3D1C115E50001A93B2 /* Supporting Files */,
+			);
+			path = MyMessenger;
+			sourceTree = "<group>";
+		};
+		5AD59F3D1C115E50001A93B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AD59F3E1C115E50001A93B2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AD59F591C115E50001A93B2 /* MyMessengerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AD59F5A1C115E50001A93B2 /* MyMessengerTests.m */,
+				5AD59F5C1C115E50001A93B2 /* Info.plist */,
+			);
+			path = MyMessengerTests;
+			sourceTree = "<group>";
+		};
+		5AD59F641C115E50001A93B2 /* MyMessengerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5AD59F651C115E50001A93B2 /* MyMessengerUITests.m */,
+				5AD59F671C115E50001A93B2 /* Info.plist */,
+			);
+			path = MyMessengerUITests;
+			sourceTree = "<group>";
+		};
+		5AD59F731C115EB7001A93B2 /* OpenChat */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30811C1C5095003CF402 /* OpenChatChannelList */,
+				5AD59F7D1C117B68001A93B2 /* OpenChatChatting */,
+			);
+			name = OpenChat;
+			sourceTree = "<group>";
+		};
+		5AD59F741C115EC4001A93B2 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30871C1C5143003CF402 /* MessagingChannelList */,
+				5A2A307B1C1C3947003CF402 /* MessagingEditList */,
+				5A1620121C1919C800A5B449 /* MessagingInvite */,
+				5AA885231C143D9B00876815 /* Messaging */,
+			);
+			name = Messaging;
+			sourceTree = "<group>";
+		};
+		5AD59F7D1C117B68001A93B2 /* OpenChatChatting */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A30841C1C50EC003CF402 /* ChattingViewController */,
+			);
+			name = OpenChatChatting;
+			sourceTree = "<group>";
+		};
+		A0305F9F44B9A73A3C08E3CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AA885401C15AAAB00876815 /* MobileCoreServices.framework */,
+				5AD59F811C119516001A93B2 /* QuartzCore.framework */,
+				C8C484DAAD0114911E007BD7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AD59F391C115E50001A93B2 /* MyMessenger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AD59F6A1C115E50001A93B2 /* Build configuration list for PBXNativeTarget "MyMessenger" */;
+			buildPhases = (
+				E5CEC6CFE924672704540C64 /* Check Pods Manifest.lock */,
+				5AD59F361C115E50001A93B2 /* Sources */,
+				5AD59F371C115E50001A93B2 /* Frameworks */,
+				5AD59F381C115E50001A93B2 /* Resources */,
+				FDE9A5B9234773AF9876C01F /* Embed Pods Frameworks */,
+				D2EEB9FFDE76EC08F54502CC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyMessenger;
+			productName = MyMessenger;
+			productReference = 5AD59F3A1C115E50001A93B2 /* MyMessenger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5AD59F551C115E50001A93B2 /* MyMessengerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AD59F6D1C115E50001A93B2 /* Build configuration list for PBXNativeTarget "MyMessengerTests" */;
+			buildPhases = (
+				5AD59F521C115E50001A93B2 /* Sources */,
+				5AD59F531C115E50001A93B2 /* Frameworks */,
+				5AD59F541C115E50001A93B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AD59F581C115E50001A93B2 /* PBXTargetDependency */,
+			);
+			name = MyMessengerTests;
+			productName = MyMessengerTests;
+			productReference = 5AD59F561C115E50001A93B2 /* MyMessengerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5AD59F601C115E50001A93B2 /* MyMessengerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AD59F701C115E50001A93B2 /* Build configuration list for PBXNativeTarget "MyMessengerUITests" */;
+			buildPhases = (
+				5AD59F5D1C115E50001A93B2 /* Sources */,
+				5AD59F5E1C115E50001A93B2 /* Frameworks */,
+				5AD59F5F1C115E50001A93B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AD59F631C115E50001A93B2 /* PBXTargetDependency */,
+			);
+			name = MyMessengerUITests;
+			productName = MyMessengerUITests;
+			productReference = 5AD59F611C115E50001A93B2 /* MyMessengerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AD59F321C115E50001A93B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = JIVER.CO;
+				TargetAttributes = {
+					5AD59F391C115E50001A93B2 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					5AD59F551C115E50001A93B2 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 5AD59F391C115E50001A93B2;
+					};
+					5AD59F601C115E50001A93B2 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 5AD59F391C115E50001A93B2;
+					};
+				};
+			};
+			buildConfigurationList = 5AD59F351C115E50001A93B2 /* Build configuration list for PBXProject "MyMessenger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5AD59F311C115E50001A93B2;
+			productRefGroup = 5AD59F3B1C115E50001A93B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AD59F391C115E50001A93B2 /* MyMessenger */,
+				5AD59F551C115E50001A93B2 /* MyMessengerTests */,
+				5AD59F601C115E50001A93B2 /* MyMessengerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AD59F381C115E50001A93B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD59F501C115E50001A93B2 /* LaunchScreen.storyboard in Resources */,
+				5AD59F4D1C115E50001A93B2 /* Assets.xcassets in Resources */,
+				5AD59F4B1C115E50001A93B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD59F541C115E50001A93B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD59F5F1C115E50001A93B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D2EEB9FFDE76EC08F54502CC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5CEC6CFE924672704540C64 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDE9A5B9234773AF9876C01F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AD59F361C115E50001A93B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD59F481C115E50001A93B2 /* MessagingChannelListViewController.m in Sources */,
+				5AD59F421C115E50001A93B2 /* AppDelegate.m in Sources */,
+				5AA8852D1C14523800876815 /* MyUtils.m in Sources */,
+				5AA8853C1C14FAF900876815 /* OpenChatFileMessageTableViewCell.m in Sources */,
+				5AA885331C14749000876815 /* MessagingMessageTableViewCell.m in Sources */,
+				5AD59F7C1C1172E3001A93B2 /* OpenChatChattingViewController.m in Sources */,
+				5AD59F451C115E50001A93B2 /* OpenChatChannelListViewController.m in Sources */,
+				5A1620151C191A0C00A5B449 /* MessagingInviteChannelTableViewCell.m in Sources */,
+				5AA885291C143DEF00876815 /* MessagingChannelListTableViewCell.m in Sources */,
+				5AA885211C132BEC00876815 /* MessagingViewController.m in Sources */,
+				5A16201B1C19238200A5B449 /* MessagingInviteSelectUserTableViewCell.m in Sources */,
+				5AA885461C17D61000876815 /* MessagingOpponentMessageTableViewCell.m in Sources */,
+				5A2A307E1C1C3975003CF402 /* MessagingEditListTableViewCell.m in Sources */,
+				5AA8853F1C15094600876815 /* SettingsViewController.m in Sources */,
+				5AA885361C1474A100876815 /* MessagingBroadcastMessageTableViewCell.m in Sources */,
+				5AD59F791C116348001A93B2 /* OpenChatChannelListTableViewCell.m in Sources */,
+				5A16201E1C19597800A5B449 /* MessagingInviteSelectUserViewController.m in Sources */,
+				5AA885491C1822A700876815 /* MessagingFileLinkTableViewCell.m in Sources */,
+				5AA8854C1C18270900876815 /* MessageOpponentFileLinkTableViewCell.m in Sources */,
+				5AD59F3F1C115E50001A93B2 /* main.m in Sources */,
+				5AA885391C1474B500876815 /* MessagingSystemMessageTableViewCell.m in Sources */,
+				5A1620111C19193400A5B449 /* MessagingInviteSelectChannelViewController.m in Sources */,
+				5A1620211C1A4F9400A5B449 /* MessagingMembersInChannelViewController.m in Sources */,
+				5A1620241C1A509F00A5B449 /* MessagingMemberTableViewCell.m in Sources */,
+				5AA885301C1467B000876815 /* MainTabBarViewController.m in Sources */,
+				5AD59F851C11C2C2001A93B2 /* OpenChatBroadcastTableViewCell.m in Sources */,
+				5AD59F801C117B8F001A93B2 /* OpenChatMessageTableViewCell.m in Sources */,
+				5A2A307A1C1C321C003CF402 /* MessagingEditChannelListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD59F521C115E50001A93B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD59F5B1C115E50001A93B2 /* MyMessengerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD59F5D1C115E50001A93B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD59F661C115E50001A93B2 /* MyMessengerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AD59F581C115E50001A93B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AD59F391C115E50001A93B2 /* MyMessenger */;
+			targetProxy = 5AD59F571C115E50001A93B2 /* PBXContainerItemProxy */;
+		};
+		5AD59F631C115E50001A93B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AD59F391C115E50001A93B2 /* MyMessenger */;
+			targetProxy = 5AD59F621C115E50001A93B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5AD59F491C115E50001A93B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AD59F4A1C115E50001A93B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5AD59F4E1C115E50001A93B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AD59F4F1C115E50001A93B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5AD59F681C115E50001A93B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5AD59F691C115E50001A93B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AD59F6B1C115E50001A93B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5348D85D6836B043DC6CCAB8 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = MyMessenger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smilefam.MyMessenger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5AD59F6C1C115E50001A93B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36BE752DA96845DA9778FD63 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = MyMessenger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smilefam.MyMessenger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5AD59F6E1C115E50001A93B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyMessengerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smilefam.MyMessengerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMessenger.app/MyMessenger";
+			};
+			name = Debug;
+		};
+		5AD59F6F1C115E50001A93B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyMessengerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smilefam.MyMessengerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMessenger.app/MyMessenger";
+			};
+			name = Release;
+		};
+		5AD59F711C115E50001A93B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MyMessengerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smilefam.MyMessengerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MyMessenger;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5AD59F721C115E50001A93B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MyMessengerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smilefam.MyMessengerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MyMessenger;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AD59F351C115E50001A93B2 /* Build configuration list for PBXProject "MyMessenger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD59F681C115E50001A93B2 /* Debug */,
+				5AD59F691C115E50001A93B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AD59F6A1C115E50001A93B2 /* Build configuration list for PBXNativeTarget "MyMessenger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD59F6B1C115E50001A93B2 /* Debug */,
+				5AD59F6C1C115E50001A93B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AD59F6D1C115E50001A93B2 /* Build configuration list for PBXNativeTarget "MyMessengerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD59F6E1C115E50001A93B2 /* Debug */,
+				5AD59F6F1C115E50001A93B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AD59F701C115E50001A93B2 /* Build configuration list for PBXNativeTarget "MyMessengerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD59F711C115E50001A93B2 /* Debug */,
+				5AD59F721C115E50001A93B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AD59F321C115E50001A93B2 /* Project object */;
+}
