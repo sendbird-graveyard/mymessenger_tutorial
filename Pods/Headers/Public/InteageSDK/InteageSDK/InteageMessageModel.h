@@ -1,0 +1,1 @@
+../../../../InteageSDK/InteageSDK.framework/Headers/InteageMessageModel.h

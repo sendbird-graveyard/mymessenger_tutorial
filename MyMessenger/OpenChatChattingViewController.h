@@ -2,13 +2,13 @@
 //  OpenChatChattingViewController.h
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/4/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/4/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import <JiverSDK/JiverSDK.h>
+#import <InteageSDK/InteageSDK.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 
 #import "MyUtils.h"
@@ -22,6 +22,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *inputViewBottomMargin;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *prevMessageLoadingIndicator;
 
-- (void)setChannel:(JiverChannel *)ch;
+- (void)setChannel:(InteageChannel *)ch;
 
 @end

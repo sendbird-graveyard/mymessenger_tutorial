@@ -2,12 +2,12 @@
 //  MessagingBroadcastMessageTableViewCell.h
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/6/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/6/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <JiverSDK/JiverSDK.h>
+#import <InteageSDK/InteageSDK.h>
 
 @interface MessagingBroadcastMessageTableViewCell : UITableViewCell
 
@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageRightMargin;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageBottomMargin;
 
-- (void)setBroadcastMessage:(JiverBroadcastMessage *)msg;
+- (void)setBroadcastMessage:(InteageBroadcastMessage *)msg;
 - (CGFloat) getCellHeight;
 
 @end

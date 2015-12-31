@@ -2,14 +2,14 @@
 //  MessagingBroadcastMessageTableViewCell.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/6/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/6/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingBroadcastMessageTableViewCell.h"
 
 @implementation MessagingBroadcastMessageTableViewCell {
-    JiverBroadcastMessage *message;
+    InteageBroadcastMessage *message;
 }
 
 - (void)awakeFromNib {
@@ -22,7 +22,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setBroadcastMessage:(JiverBroadcastMessage *)msg
+- (void)setBroadcastMessage:(InteageBroadcastMessage *)msg
 {
     message = msg;
     

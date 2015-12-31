@@ -2,17 +2,17 @@
 //  MessagingMembersInChannelViewController.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/11/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/11/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingMembersInChannelViewController.h"
 
 @interface MessagingMembersInChannelViewController ()<UITableViewDataSource, UITableViewDelegate> {
-    JiverMessagingChannel *currentChannel;
+    InteageMessagingChannel *currentChannel;
     NSMutableArray *userArray;
     BOOL isLoadingUser;
-    JiverMemberListQuery *memberListQuery;
+    InteageMemberListQuery *memberListQuery;
 }
 
 @end
@@ -28,10 +28,10 @@
     [self.messagingMemberTableView setDelegate:self];
     [self.messagingMemberTableView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
     
-    [Jiver loginWithUserId:[Jiver deviceUniqueID] andUserName:[MyUtils getUserName] andUserImageUrl:[MyUtils getUserProfileImage] andAccessToken:@""];
-    memberListQuery = [Jiver queryMemberListInChannel:[currentChannel getUrl]];
+    [Inteage loginWithUserId:[Inteage deviceUniqueID] andUserName:[MyUtils getUserName] andUserImageUrl:[MyUtils getUserProfileImage] andAccessToken:@""];
+    memberListQuery = [Inteage queryMemberListInChannel:[currentChannel getUrl]];
     [memberListQuery nextWithResultBlock:^(NSMutableArray *queryResult) {
-        for (JiverMemberInMessagingChannel *user in queryResult) {
+        for (InteageMemberInMessagingChannel *user in queryResult) {
             [userArray addObject:user];
         }
         [self.messagingMemberTableView reloadData];
@@ -45,7 +45,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setJiverMessagingChannel:(JiverMessagingChannel *)channel
+- (void)setInteageMessagingChannel:(InteageMessagingChannel *)channel
 {
     currentChannel = channel;
 }
@@ -72,7 +72,7 @@
     isLoadingUser = YES;
     
     [memberListQuery nextWithResultBlock:^(NSMutableArray *queryResult) {
-        for (JiverMember *member in queryResult) {
+        for (InteageMember *member in queryResult) {
             [userArray addObject:member];
         }
         [self.messagingMemberTableView reloadData];
@@ -96,8 +96,8 @@
 {
     if ([indexPath section] == 0) {
         MessagingMemberTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingMemberrCell"];
-        JiverMemberInMessagingChannel *member = (JiverMemberInMessagingChannel *)[userArray objectAtIndex:[indexPath row]];
-        [cell setJiverMember:member];
+        InteageMemberInMessagingChannel *member = (InteageMemberInMessagingChannel *)[userArray objectAtIndex:[indexPath row]];
+        [cell setInteageMember:member];
         
         if ([indexPath row] + 1 == [userArray count]) {
             [self loadNextMemberList];

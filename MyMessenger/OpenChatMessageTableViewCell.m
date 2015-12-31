@@ -2,14 +2,14 @@
 //  OpenChatMessageTableViewCell.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/4/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/4/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "OpenChatMessageTableViewCell.h"
 
 @implementation OpenChatMessageTableViewCell {
-    JiverMessage *message;
+    InteageMessage *message;
 }
 
 - (void)awakeFromNib {
@@ -24,7 +24,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setMessage:(JiverMessage *)msg {
+- (void)setMessage:(InteageMessage *)msg {
     message = msg;
     
     [self.messageLabel setAttributedText:[self buildMessage]];

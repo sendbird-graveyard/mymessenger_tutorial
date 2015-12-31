@@ -2,12 +2,12 @@
 //  MyUtils.h
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/6/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/6/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <JiverSDK/JiverSDK.h>
+#import <InteageSDK/InteageSDK.h>
 
 @interface MyUtils : NSObject
 
@@ -16,8 +16,8 @@
 + (NSString *) getUserName;
 + (void) setUserProfileImage:(NSString *)profileImageUrl;
 + (NSString *) getUserProfileImage;
-+ (NSString *)generateMessagingTitle:(JiverMessagingChannel *)channel;
-+ (NSString *)generateMessagingChannelTitle:(JiverMessagingChannel *)channel;
++ (NSString *)generateMessagingTitle:(InteageMessagingChannel *)channel;
++ (NSString *)generateMessagingChannelTitle:(InteageMessagingChannel *)channel;
 + (NSString *)generateTypingStatus:(NSMutableDictionary *)typeStatus;
 
 @end

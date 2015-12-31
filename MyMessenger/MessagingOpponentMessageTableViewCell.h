@@ -2,12 +2,12 @@
 //  MessagingOpponentMessageTableViewCell.h
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/9/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/9/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <JiverSDK/JiverSDK.h>
+#import <InteageSDK/InteageSDK.h>
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
@@ -28,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageLabelBottomMargin;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *nicknameMessageContainerGap;
 
-- (void)setMessage:(JiverMessage *)msg;
+- (void)setMessage:(InteageMessage *)msg;
 - (CGFloat) getCellHeight;
 
 @end

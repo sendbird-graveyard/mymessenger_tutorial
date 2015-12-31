@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/4/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/4/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [Jiver initAppId:@"<YOUR_APP_ID>"];
+    [Inteage initAppId:@"<YOUR_APP_ID>"];
     
     return YES;
 }

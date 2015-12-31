@@ -2,8 +2,8 @@
 //  OpenChatChattingViewController.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/4/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/4/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "OpenChatChattingViewController.h"
@@ -13,7 +13,7 @@
 #import "OpenChatFileMessageTableViewCell.h"
 
 @interface OpenChatChattingViewController ()<UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MessagingViewControllerDelegate, UITextFieldDelegate>  {
-    JiverChannel *currentChannel;
+    InteageChannel *currentChannel;
     NSMutableArray *messages;
     BOOL isLoadingMessage;
     BOOL openImagePicker;
@@ -79,11 +79,11 @@
     [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
     if (!openImagePicker) {
-        [Jiver disconnect];
+        [Inteage disconnect];
     }
 }
 
-- (void)setChannel:(JiverChannel *)ch {
+- (void)setChannel:(InteageChannel *)ch {
     currentChannel = ch;
 }
 
@@ -178,23 +178,23 @@
 {
     if ([indexPath section] == 0) {
         UITableViewCell *commonCell = nil;
-        JiverMessageModel *msgModel = (JiverMessageModel *)[messages objectAtIndex:[indexPath row]];
+        InteageMessageModel *msgModel = (InteageMessageModel *)[messages objectAtIndex:[indexPath row]];
         
-        if ([msgModel isKindOfClass:[JiverMessage class]]) {
+        if ([msgModel isKindOfClass:[InteageMessage class]]) {
             OpenChatMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OpenChatMessageCell"];
            
-            [cell setMessage:(JiverMessage *)msgModel];
+            [cell setMessage:(InteageMessage *)msgModel];
             
             commonCell = cell;
         }
-        else if ([msgModel isKindOfClass:[JiverBroadcastMessage class]]) {
+        else if ([msgModel isKindOfClass:[InteageBroadcastMessage class]]) {
             OpenChatBroadcastTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OpenChatBroadcastCell"];
-            [cell setBroadcastMessage:(JiverBroadcastMessage *)msgModel];
+            [cell setBroadcastMessage:(InteageBroadcastMessage *)msgModel];
             commonCell = cell;
         }
-        else if ([msgModel isKindOfClass:[JiverFileLink class]]) {
+        else if ([msgModel isKindOfClass:[InteageFileLink class]]) {
             OpenChatFileMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OpenChatFileCell"];
-            [cell setFileMessage:(JiverFileLink *)msgModel];
+            [cell setFileMessage:(InteageFileLink *)msgModel];
             commonCell = cell;
         }
         
@@ -243,22 +243,22 @@
 {
     if ([indexPath section] == 0) {
         CGFloat height = 0;
-        JiverMessageModel *msgModel = (JiverMessageModel *)[messages objectAtIndex:[indexPath row]];
+        InteageMessageModel *msgModel = (InteageMessageModel *)[messages objectAtIndex:[indexPath row]];
         
-        if ([msgModel isKindOfClass:[JiverMessage class]]) {
+        if ([msgModel isKindOfClass:[InteageMessage class]]) {
             OpenChatMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OpenChatMessageCell"];
             
-            [cell setMessage:(JiverMessage *)msgModel];
+            [cell setMessage:(InteageMessage *)msgModel];
             height = [cell getCellHeight];
         }
-        else if ([msgModel isKindOfClass:[JiverBroadcastMessage class]]) {
+        else if ([msgModel isKindOfClass:[InteageBroadcastMessage class]]) {
             OpenChatBroadcastTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OpenChatBroadcastCell"];
-            [cell setBroadcastMessage:(JiverBroadcastMessage *)msgModel];
+            [cell setBroadcastMessage:(InteageBroadcastMessage *)msgModel];
             height = [cell getCellHeight];
         }
-        else if ([msgModel isKindOfClass:[JiverFileLink class]]) {
+        else if ([msgModel isKindOfClass:[InteageFileLink class]]) {
             OpenChatFileMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OpenChatFileCell"];
-            [cell setFileMessage:(JiverFileLink *)msgModel];
+            [cell setFileMessage:(InteageFileLink *)msgModel];
             height = [cell getCellHeight];
         }
 

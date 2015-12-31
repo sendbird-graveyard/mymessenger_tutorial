@@ -2,12 +2,12 @@
 //  MessagingViewController.h
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/5/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/5/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <JiverSDK/JiverSDK.h>
+#import <InteageSDK/InteageSDK.h>
 #import <QuartzCore/QuartzCore.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 
@@ -36,6 +36,6 @@
 
 @property (nonatomic, weak) id <MessagingViewControllerDelegate> delegate;
 
-- (void)setMessagingChannel:(JiverMessagingChannel *)ch;
+- (void)setMessagingChannel:(InteageMessagingChannel *)ch;
 
 @end

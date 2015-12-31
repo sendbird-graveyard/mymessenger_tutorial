@@ -2,8 +2,8 @@
 //  MessagingInviteSelectChannelViewController.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/10/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/10/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingInviteSelectChannelViewController.h"
@@ -11,7 +11,7 @@
 @interface MessagingInviteSelectChannelViewController ()<UITableViewDataSource, UITableViewDelegate> {
     NSMutableArray *channelArray;
     BOOL isLoadingChannel;
-    JiverChannelListQuery *channelListQuery;
+    InteageChannelListQuery *channelListQuery;
 }
 
 @end
@@ -32,10 +32,10 @@
     
     [self.openChatChannelListLoadingIndicator setHidden:YES];
 
-    [Jiver loginWithUserId:[Jiver deviceUniqueID] andUserName:[MyUtils getUserName] andUserImageUrl:[MyUtils getUserProfileImage] andAccessToken:@""];
-    channelListQuery = [Jiver queryChannelList];
+    [Inteage loginWithUserId:[Inteage deviceUniqueID] andUserName:[MyUtils getUserName] andUserImageUrl:[MyUtils getUserProfileImage] andAccessToken:@""];
+    channelListQuery = [Inteage queryChannelList];
     [channelListQuery nextWithResultBlock:^(NSMutableArray *queryResult) {
-        for (JiverChannel *channel in queryResult) {
+        for (InteageChannel *channel in queryResult) {
             [channelArray addObject:channel];
         }
         [self.openChatChannelListTableView reloadData];
@@ -59,7 +59,7 @@
     if ([segue.destinationViewController isKindOfClass:[MessagingInviteSelectUserViewController class]]) {
         NSIndexPath *path = [self.openChatChannelListTableView indexPathForSelectedRow];
         MessagingInviteSelectUserViewController *vc = (MessagingInviteSelectUserViewController *)segue.destinationViewController;
-        JiverChannel *channel = [channelArray objectAtIndex:[path row]];
+        InteageChannel *channel = [channelArray objectAtIndex:[path row]];
         [vc setChannel:channel];
         
         [self.openChatChannelListTableView deselectRowAtIndexPath:path animated:NO];
@@ -78,7 +78,7 @@
     isLoadingChannel = YES;
     
     [channelListQuery nextWithResultBlock:^(NSMutableArray *queryResult) {
-        for (JiverChannel *channel in queryResult) {
+        for (InteageChannel *channel in queryResult) {
             [channelArray addObject:channel];
         }
         [self.openChatChannelListTableView reloadData];
@@ -98,7 +98,7 @@
 {
     if ([indexPath section] == 0) {
         MessagingInviteChannelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingInviteChannelCell"];
-        JiverChannel *channel = (JiverChannel *)[channelArray objectAtIndex:[indexPath row]];
+        InteageChannel *channel = (InteageChannel *)[channelArray objectAtIndex:[indexPath row]];
         [cell setChannel:channel];
         
         if ([indexPath row] + 1 == [channelArray count]) {

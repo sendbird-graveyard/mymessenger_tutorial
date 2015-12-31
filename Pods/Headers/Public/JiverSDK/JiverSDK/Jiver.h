@@ -1,1 +1,0 @@
-../../../../JiverSDK/JiverSDK.framework/Headers/Jiver.h

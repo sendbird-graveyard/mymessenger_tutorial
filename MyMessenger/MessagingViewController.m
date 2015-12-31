@@ -2,8 +2,8 @@
 //  MessagingViewController.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/5/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/5/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingViewController.h"
@@ -15,7 +15,7 @@
 #import "MessageOpponentFileLinkTableViewCell.h"
 
 @interface MessagingViewController ()<UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate> {
-    JiverMessagingChannel *currentChannel;
+    InteageMessagingChannel *currentChannel;
     NSMutableArray *messages;
     BOOL isLoadingMessage;
     BOOL firstTimeLoading;
@@ -90,20 +90,20 @@
     // See 'How to build an iOS messaging app'
 }
 
-- (void)setMessagingChannel:(JiverMessagingChannel *)ch
+- (void)setMessagingChannel:(InteageMessagingChannel *)ch
 {
     currentChannel = ch;
 }
 
 - (IBAction)closeMessaging:(id)sender {
-    [Jiver disconnect];
+    [Inteage disconnect];
     [[self delegate] prepareCloseMessagingViewController];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)leaveMessaging:(id)sender {
-    [Jiver endMessagingWithChannelUrl:[currentChannel getUrl]];
-    [Jiver disconnect];
+    [Inteage endMessagingWithChannelUrl:[currentChannel getUrl]];
+    [Inteage disconnect];
     [[self delegate] prepareCloseMessagingViewController];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -163,8 +163,8 @@
     NSString *message = [self.messageTextField text];
     if ([message length] > 0) {
         [self.messageTextField setText:@""];
-        [Jiver sendMessage:message];
-        [Jiver typeEnd];
+        [Inteage sendMessage:message];
+        [Inteage typeEnd];
     }
     scrollLocked = NO;
 }
@@ -187,7 +187,7 @@
 
 - (void) setTypeStatus:(NSString *)userId andTimestamp:(long long)ts
 {
-    if ([userId isEqualToString:[Jiver getUserId]]) {
+    if ([userId isEqualToString:[Inteage getUserId]]) {
         return;
     }
     
@@ -220,7 +220,7 @@
     // See 'How to build an iOS messaging app'
 }
 
-- (void) updateMessagingChannel:(JiverMessagingChannel *)channel
+- (void) updateMessagingChannel:(InteageMessagingChannel *)channel
 {
     // See 'How to build an iOS messaging app'
 }
@@ -229,7 +229,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.destinationViewController isKindOfClass:[MessagingMembersInChannelViewController class]]) {
         MessagingMembersInChannelViewController *vc = (MessagingMembersInChannelViewController *)segue.destinationViewController;
-        [vc setJiverMessagingChannel:currentChannel];
+        [vc setInteageMessagingChannel:currentChannel];
     }
 }
 
@@ -243,43 +243,43 @@
 {
     if ([indexPath section] == 0) {
         UITableViewCell *commonCell = nil;
-        JiverMessageModel *msgModel = (JiverMessageModel *)[messages objectAtIndex:[indexPath row]];
+        InteageMessageModel *msgModel = (InteageMessageModel *)[messages objectAtIndex:[indexPath row]];
         
-        if ([msgModel isKindOfClass:[JiverMessage class]]) {
-            JiverMessage *msg = (JiverMessage *)msgModel;
-            if ([[[msg sender] guestId] isEqualToString:[Jiver getUserId]]) {
+        if ([msgModel isKindOfClass:[InteageMessage class]]) {
+            InteageMessage *msg = (InteageMessage *)msgModel;
+            if ([[[msg sender] guestId] isEqualToString:[Inteage getUserId]]) {
                 MessagingMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingMessageCell"];
                 [cell setReadStatus:readStatus];
-                [cell setMessage:(JiverMessage *)msgModel];
+                [cell setMessage:(InteageMessage *)msgModel];
                 commonCell = cell;
             }
             else {
                 MessagingOpponentMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingOpponentMessageCell"];
-                [cell setMessage:(JiverMessage *)msgModel];
+                [cell setMessage:(InteageMessage *)msgModel];
                 commonCell = cell;
             }
         }
-        else if ([msgModel isKindOfClass:[JiverBroadcastMessage class]]) {
+        else if ([msgModel isKindOfClass:[InteageBroadcastMessage class]]) {
             MessagingBroadcastMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingBroadcastMessageCell"];
-            [cell setBroadcastMessage:(JiverBroadcastMessage *)msgModel];
+            [cell setBroadcastMessage:(InteageBroadcastMessage *)msgModel];
             commonCell = cell;
         }
-        else if ([msgModel isKindOfClass:[JiverSystemMessage class]]) {
+        else if ([msgModel isKindOfClass:[InteageSystemMessage class]]) {
             MessagingSystemMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingSystemMessageCell"];
-            [cell setSystemMessage:(JiverSystemMessage *)msgModel];
+            [cell setSystemMessage:(InteageSystemMessage *)msgModel];
             commonCell = cell;
         }
-        else if ([msgModel isKindOfClass:[JiverFileLink class]]) {
-            JiverFileLink *msg = (JiverFileLink *)msgModel;
-            if ([[[msg sender] guestId] isEqualToString:[Jiver getUserId]]) {
+        else if ([msgModel isKindOfClass:[InteageFileLink class]]) {
+            InteageFileLink *msg = (InteageFileLink *)msgModel;
+            if ([[[msg sender] guestId] isEqualToString:[Inteage getUserId]]) {
                 MessagingFileLinkTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingFileLinkCell"];
                 [cell setReadStatus:readStatus];
-                [cell setFileMessage:(JiverFileLink *)msgModel];
+                [cell setFileMessage:(InteageFileLink *)msgModel];
                 commonCell = cell;
             }
             else {
                 MessageOpponentFileLinkTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingOpponentFileLinkCell"];
-                [cell setFileMessage:(JiverFileLink *)msgModel];
+                [cell setFileMessage:(InteageFileLink *)msgModel];
                 commonCell = cell;
             }
         }
@@ -329,41 +329,41 @@
 {
     if ([indexPath section] == 0) {
         CGFloat height = 0;
-        JiverMessageModel *msgModel = (JiverMessageModel *)[messages objectAtIndex:[indexPath row]];
+        InteageMessageModel *msgModel = (InteageMessageModel *)[messages objectAtIndex:[indexPath row]];
         
-        if ([msgModel isKindOfClass:[JiverMessage class]]) {
-            JiverMessage *msg = (JiverMessage *)msgModel;
-            if ([[[msg sender] guestId] isEqualToString:[Jiver getUserId]]) {
+        if ([msgModel isKindOfClass:[InteageMessage class]]) {
+            InteageMessage *msg = (InteageMessage *)msgModel;
+            if ([[[msg sender] guestId] isEqualToString:[Inteage getUserId]]) {
                 MessagingMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingMessageCell"];
-                [cell setMessage:(JiverMessage *)msgModel];
+                [cell setMessage:(InteageMessage *)msgModel];
                  height = [cell getCellHeight];
             }
             else {
                 MessagingOpponentMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingOpponentMessageCell"];
-                [cell setMessage:(JiverMessage *)msgModel];
+                [cell setMessage:(InteageMessage *)msgModel];
                  height = [cell getCellHeight];
             }
         }
-        else if ([msgModel isKindOfClass:[JiverBroadcastMessage class]]) {
+        else if ([msgModel isKindOfClass:[InteageBroadcastMessage class]]) {
             MessagingBroadcastMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingBroadcastMessageCell"];
-            [cell setBroadcastMessage:(JiverBroadcastMessage *)msgModel];
+            [cell setBroadcastMessage:(InteageBroadcastMessage *)msgModel];
             height = [cell getCellHeight];
         }
-        else if ([msgModel isKindOfClass:[JiverSystemMessage class]]) {
+        else if ([msgModel isKindOfClass:[InteageSystemMessage class]]) {
             MessagingSystemMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingSystemMessageCell"];
-            [cell setSystemMessage:(JiverSystemMessage *)msgModel];
+            [cell setSystemMessage:(InteageSystemMessage *)msgModel];
             height = [cell getCellHeight];
         }
-        else if ([msgModel isKindOfClass:[JiverFileLink class]]) {
-            JiverFileLink *msg = (JiverFileLink *)msgModel;
-            if ([[[msg sender] guestId] isEqualToString:[Jiver getUserId]]) {
+        else if ([msgModel isKindOfClass:[InteageFileLink class]]) {
+            InteageFileLink *msg = (InteageFileLink *)msgModel;
+            if ([[[msg sender] guestId] isEqualToString:[Inteage getUserId]]) {
                 MessagingFileLinkTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingFileLinkCell"];
-                [cell setFileMessage:(JiverFileLink *)msgModel];
+                [cell setFileMessage:(InteageFileLink *)msgModel];
                 height = [cell getCellHeight];
             }
             else {
                 MessageOpponentFileLinkTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingOpponentFileLinkCell"];
-                [cell setFileMessage:(JiverFileLink *)msgModel];
+                [cell setFileMessage:(InteageFileLink *)msgModel];
                 height = [cell getCellHeight];
             }
         }

@@ -2,12 +2,12 @@
 //  MessagingInviteSelectChannelViewController.h
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/10/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/10/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <JiverSDK/JiverSDK.h>
+#import <InteageSDK/InteageSDK.h>
 
 #import "MessagingInviteChannelTableViewCell.h"
 #import "MessagingInviteSelectUserViewController.h"

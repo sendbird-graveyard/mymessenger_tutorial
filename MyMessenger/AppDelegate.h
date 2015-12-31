@@ -2,12 +2,12 @@
 //  AppDelegate.h
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/4/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/4/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <JiverSDK/JiverSDK.h>
+#import <InteageSDK/InteageSDK.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

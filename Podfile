@@ -1,2 +1,2 @@
 pod 'AFNetworking', '~> 2.5'
-pod 'JiverSDK'
+pod 'InteageSDK'

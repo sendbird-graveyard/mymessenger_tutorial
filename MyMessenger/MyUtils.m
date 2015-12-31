@@ -2,14 +2,14 @@
 //  MyUtils.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/6/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/6/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MyUtils.h"
 
-#define kKeyUserName @"jiver_comm_ios_username"
-#define kKeyUserProfileImageUrl @"jiver_comm_ios_userprofileimageurl"
+#define kKeyUserName @"inteage_comm_ios_username"
+#define kKeyUserProfileImageUrl @"inteage_comm_ios_userprofileimageurl"
 
 @implementation MyUtils
 
@@ -44,7 +44,7 @@
     }
     
     if ([userName length] == 0) {
-        NSString *deviceId = [Jiver deviceUniqueID];
+        NSString *deviceId = [Inteage deviceUniqueID];
         userName = [NSString stringWithFormat:@"User-%@", [deviceId substringToIndex:5]];
     }
     
@@ -70,12 +70,12 @@
     }
 }
 
-+ (NSString *)generateMessagingTitle:(JiverMessagingChannel *)channel
++ (NSString *)generateMessagingTitle:(InteageMessagingChannel *)channel
 {
     if ([[channel members] count] == 2) {
         NSString *title = @"";
-        for (JiverMemberInMessagingChannel *member in [channel members]) {
-            if (![[member guestId] isEqualToString:[Jiver getUserId]]) {
+        for (InteageMemberInMessagingChannel *member in [channel members]) {
+            if (![[member guestId] isEqualToString:[Inteage getUserId]]) {
                 title = [member name];
             }
         }
@@ -86,12 +86,12 @@
     }
 }
 
-+ (NSString *)generateMessagingChannelTitle:(JiverMessagingChannel *)channel
++ (NSString *)generateMessagingChannelTitle:(InteageMessagingChannel *)channel
 {
     if ([[channel members] count] == 2) {
         NSString *title = @"";
-        for (JiverMemberInMessagingChannel *member in [channel members]) {
-            if (![[member guestId] isEqualToString:[Jiver getUserId]]) {
+        for (InteageMemberInMessagingChannel *member in [channel members]) {
+            if (![[member guestId] isEqualToString:[Inteage getUserId]]) {
                 title = [member name];
             }
         }
@@ -100,8 +100,8 @@
     else {
         NSString *title = @"";
         NSMutableArray *names = [[NSMutableArray alloc] init];
-        for (JiverMemberInMessagingChannel *member in [channel members]) {
-            if (![[member guestId] isEqualToString:[Jiver getUserId]]) {
+        for (InteageMemberInMessagingChannel *member in [channel members]) {
+            if (![[member guestId] isEqualToString:[Inteage getUserId]]) {
                 [names addObject:[member name]];
             }
         }

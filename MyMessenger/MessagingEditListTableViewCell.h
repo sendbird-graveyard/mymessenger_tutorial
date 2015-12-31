@@ -2,14 +2,14 @@
 //  MessagingEditListTableViewCell.h
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/12/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/12/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/UIImageView+AFNetworking.h>
-#import <JiverSDK/JiverSDK.h>
+#import <InteageSDK/InteageSDK.h>
 
 #import "MyUtils.h"
 
@@ -20,6 +20,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messagingChannelCoverImageWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messagingChannelCoverImageHeight;
 
-- (void)setMessagingChannel:(JiverMessagingChannel *)mc;
+- (void)setMessagingChannel:(InteageMessagingChannel *)mc;
 
 @end

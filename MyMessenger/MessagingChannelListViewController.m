@@ -2,8 +2,8 @@
 //  SecondViewController.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/4/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/4/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingChannelListViewController.h"
@@ -14,7 +14,7 @@
 @interface MessagingChannelListViewController ()<UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MessagingViewControllerDelegate, MessagingInviteSelectChannelViewControllerDelegate> {
     NSMutableArray *channelArray;
     BOOL isLoadingChannel;
-    JiverMessagingChannelListQuery *messagingChannelListQuery;
+    InteageMessagingChannelListQuery *messagingChannelListQuery;
 }
 
 @end
@@ -39,7 +39,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) startJiver
+- (void) startInteage
 {
     // See 'How to build an iOS messaging app'
 }
@@ -71,7 +71,7 @@
 {
     if ([indexPath section] == 0) {
         MessagingChannelListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingChannelCell"];
-        JiverMessagingChannel *channel = (JiverMessagingChannel *)[channelArray objectAtIndex:[indexPath row]];
+        InteageMessagingChannel *channel = (InteageMessagingChannel *)[channelArray objectAtIndex:[indexPath row]];
         [cell setMessagingChannel:channel];
        
         if ([indexPath row] + 1 == [channelArray count]) {
@@ -109,13 +109,13 @@
 #pragma mark - MessagingViewControllerDelegate
 - (void) prepareCloseMessagingViewController
 {
-    [self startJiver];
+    [self startInteage];
 }
 
 #pragma mark - MessagingInviteSelectChannelViewControllerDelegate
 - (void) prepareCloseMessagingInviteSelectChannelViewController
 {
-    [self startJiver];
+    [self startInteage];
 }
 
 @end

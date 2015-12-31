@@ -2,8 +2,8 @@
 //  FirstViewController.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/4/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/4/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "OpenChatChannelListViewController.h"
@@ -47,7 +47,7 @@
     if ([segue.destinationViewController isKindOfClass:[OpenChatChattingViewController class]]) {
         NSIndexPath *path = [self.openChatChannelListTableView indexPathForSelectedRow];
         OpenChatChattingViewController *vc = (OpenChatChattingViewController *)segue.destinationViewController;
-        JiverChannel *channel = [channelArray objectAtIndex:[path row]];
+        InteageChannel *channel = [channelArray objectAtIndex:[path row]];
         [vc setChannel:channel];
         
         [self.openChatChannelListTableView deselectRowAtIndexPath:path animated:NO];
@@ -69,7 +69,7 @@
 {
     if ([indexPath section] == 0) {
         OpenChatChannelListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OpenChatChannelListCell"];
-        JiverChannel *channel = (JiverChannel *)[channelArray objectAtIndex:[indexPath row]];
+        InteageChannel *channel = (InteageChannel *)[channelArray objectAtIndex:[indexPath row]];
         [cell setChannel:channel];
         
         if ([indexPath row] + 1 == [channelArray count]) {

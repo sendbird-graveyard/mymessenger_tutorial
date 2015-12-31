@@ -2,14 +2,14 @@
 //  MessagingMessageTableViewCell.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/6/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/6/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingMessageTableViewCell.h"
 
 @implementation MessagingMessageTableViewCell {
-    JiverMessage *message;
+    InteageMessage *message;
 }
 
 - (void)awakeFromNib {
@@ -25,7 +25,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setMessage:(JiverMessage *)msg
+- (void)setMessage:(InteageMessage *)msg
 {
     message = msg;
 
@@ -38,7 +38,7 @@
     int unreadCount = 0;
     if (self.readStatus != nil) {
         for (NSString *key in self.readStatus) {
-            if (![key isEqualToString:[Jiver getUserId]]) {
+            if (![key isEqualToString:[Inteage getUserId]]) {
                 long long readTime = [[self.readStatus objectForKey:key] longLongValue] / 1000;
                 if (ts <= readTime) {
                     //                    [self.unreadLabel setHidden:YES];
@@ -63,7 +63,7 @@
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
-    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Jiver VERSION]] forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Inteage VERSION]] forHTTPHeaderField:@"User-Agent"];
     [request setURL:[NSURL URLWithString:imageUrl]];
     
     [self.profileImageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {

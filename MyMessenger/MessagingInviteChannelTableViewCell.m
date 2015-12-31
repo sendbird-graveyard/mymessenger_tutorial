@@ -2,14 +2,14 @@
 //  MessagingInviteChannelTableViewCell.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/10/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/10/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingInviteChannelTableViewCell.h"
 
 @implementation MessagingInviteChannelTableViewCell{
-    JiverChannel *channel;
+    InteageChannel *channel;
 }
 
 - (void)awakeFromNib {
@@ -28,7 +28,7 @@
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
-    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Jiver VERSION]] forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Inteage VERSION]] forHTTPHeaderField:@"User-Agent"];
     [request setURL:[NSURL URLWithString:imageUrl]];
     
     [self.channelCoverImageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
@@ -57,7 +57,7 @@
     [self.channelTopicLabel setText:topic];
 }
 
-- (void)setChannel:(JiverChannel *)ch
+- (void)setChannel:(InteageChannel *)ch
 {
     channel = ch;
     [self setCoverImage:channel.coverUrl];

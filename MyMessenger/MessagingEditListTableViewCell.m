@@ -2,14 +2,14 @@
 //  MessagingEditListTableViewCell.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/12/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/12/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingEditListTableViewCell.h"
 
 @implementation MessagingEditListTableViewCell {
-    JiverMessagingChannel *channel;
+    InteageMessagingChannel *channel;
 }
 
 - (void)awakeFromNib {
@@ -28,7 +28,7 @@
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
-    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Jiver VERSION]] forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Inteage VERSION]] forHTTPHeaderField:@"User-Agent"];
     [request setURL:[NSURL URLWithString:imageUrl]];
     
     [self.messagingChannelCoverImageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
@@ -52,7 +52,7 @@
     } failure:nil];
 }
 
-- (void)setMessagingChannel:(JiverMessagingChannel *)mc
+- (void)setMessagingChannel:(InteageMessagingChannel *)mc
 {
     channel = mc;
     

@@ -1,0 +1,1 @@
+../../../../InteageSDK/InteageSDK.framework/Headers/Inteage.h

@@ -2,14 +2,14 @@
 //  MessagingSystemMessageTableViewCell.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/6/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/6/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingSystemMessageTableViewCell.h"
 
 @implementation MessagingSystemMessageTableViewCell {
-    JiverSystemMessage *message;
+    InteageSystemMessage *message;
 }
 
 - (void)awakeFromNib {
@@ -22,7 +22,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setSystemMessage:(JiverSystemMessage *)msg
+- (void)setSystemMessage:(InteageSystemMessage *)msg
 {
     message = msg;
     

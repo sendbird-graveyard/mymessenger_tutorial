@@ -20,14 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - JiverSDK (1.1.43)
+  - InteageSDK (2.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
-  - JiverSDK
+  - InteageSDK
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  JiverSDK: cdfc7315842be52f390f07d3da4eb377b03d2141
+  InteageSDK: 48bbd180a6e0613ffdc0ccb1132ff97df6281ed0
 
 COCOAPODS: 0.39.0

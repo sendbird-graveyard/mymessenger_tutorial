@@ -2,14 +2,14 @@
 //  OpenChatFileMessageTableViewCell.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/7/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/7/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "OpenChatFileMessageTableViewCell.h"
 
 @implementation OpenChatFileMessageTableViewCell {
-    JiverFileLink *message;
+    InteageFileLink *message;
 }
 
 - (void)awakeFromNib {
@@ -24,7 +24,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setFileMessage:(JiverFileLink *)msg
+- (void)setFileMessage:(InteageFileLink *)msg
 {
     message = msg;
     
@@ -52,7 +52,7 @@
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
-    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Jiver VERSION]] forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Inteage VERSION]] forHTTPHeaderField:@"User-Agent"];
     [request setURL:[NSURL URLWithString:imageUrl]];
     
     [self.fileImageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {

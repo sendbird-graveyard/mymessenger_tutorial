@@ -2,14 +2,14 @@
 //  OpenChatFileMessageTableViewCell.h
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/7/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/7/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/UIImageView+AFNetworking.h>
-#import <JiverSDK/JiverSDK.h>
+#import <InteageSDK/InteageSDK.h>
 
 @interface OpenChatFileMessageTableViewCell : UITableViewCell
 
@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftMargin;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightMargin;
 
-- (void)setFileMessage:(JiverFileLink *)msg;
+- (void)setFileMessage:(InteageFileLink *)msg;
 - (CGFloat) getCellHeight;
 
 @end

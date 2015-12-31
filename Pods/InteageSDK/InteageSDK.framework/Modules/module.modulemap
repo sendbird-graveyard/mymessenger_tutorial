@@ -1,0 +1,6 @@
+framework module InteageSDK {
+  umbrella header "InteageSDK.h"
+
+  export *
+  module * { export * }
+}

@@ -2,14 +2,14 @@
 //  MessagingOpponentMessageTableViewCell.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/9/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/9/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingOpponentMessageTableViewCell.h"
 
 @implementation MessagingOpponentMessageTableViewCell{
-    JiverMessage *message;
+    InteageMessage *message;
 }
 
 - (void)awakeFromNib {
@@ -25,7 +25,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setMessage:(JiverMessage *)msg
+- (void)setMessage:(InteageMessage *)msg
 {
     message = msg;
     
@@ -40,7 +40,7 @@
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
-    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Jiver VERSION]] forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Inteage VERSION]] forHTTPHeaderField:@"User-Agent"];
     [request setURL:[NSURL URLWithString:imageUrl]];
     
     [self.profileImageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {

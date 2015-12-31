@@ -2,8 +2,8 @@
 //  MainTabBarViewController.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/6/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/6/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MainTabBarViewController.h"
@@ -31,7 +31,7 @@
 {
     if ([item tag] == 1) {
         MessagingChannelListViewController *vc = (MessagingChannelListViewController *)[[self viewControllers] objectAtIndex:1];
-        [vc startJiver];
+        [vc startInteage];
     }
 }
 

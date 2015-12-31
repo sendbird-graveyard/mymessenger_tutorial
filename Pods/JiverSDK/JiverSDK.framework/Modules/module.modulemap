@@ -1,6 +1,0 @@
-framework module JiverSDK {
-  umbrella header "JiverSDK.h"
-
-  export *
-  module * { export * }
-}

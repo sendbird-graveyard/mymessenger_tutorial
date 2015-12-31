@@ -2,8 +2,8 @@
 //  SettingsViewController.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/7/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/7/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "SettingsViewController.h"
@@ -55,7 +55,7 @@
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
-    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Jiver VERSION]] forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Inteage VERSION]] forHTTPHeaderField:@"User-Agent"];
     [request setURL:[NSURL URLWithString:imageUrl]];
     
     [self.profileImageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
@@ -135,7 +135,7 @@
             imageName = [imagePath lastPathComponent];
             [self.imageLoadingIndicator setHidden:NO];
             [self.imageLoadingIndicator startAnimating];
-            [Jiver uploadFile:imageFileData type:@"image/jpg" hasSizeOfFile:[imageFileData length] withCustomField:@"" uploadBlock:^(JiverFileInfo *fileInfo, NSError *error) {
+            [Inteage uploadFile:imageFileData type:@"image/jpg" hasSizeOfFile:[imageFileData length] withCustomField:@"" uploadBlock:^(InteageFileInfo *fileInfo, NSError *error) {
                 profileImageUrl = [fileInfo url];
                 [self loadProfileImage:profileImageUrl];
             }];

@@ -2,14 +2,14 @@
 //  MessagingMemberTableViewCell.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/11/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/11/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingMemberTableViewCell.h"
 
 @implementation MessagingMemberTableViewCell {
-    JiverMemberInMessagingChannel *member;
+    InteageMemberInMessagingChannel *member;
 }
 
 - (void)awakeFromNib {
@@ -25,7 +25,7 @@
     // Configure the view for the selected state
 }
 
-- (void) setJiverMember:(JiverMemberInMessagingChannel *)mbr
+- (void) setInteageMember:(InteageMemberInMessagingChannel *)mbr
 {
     member = mbr;
     
@@ -37,7 +37,7 @@
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
-    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Jiver VERSION]] forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[NSString stringWithFormat:@"Jios/%@", [Inteage VERSION]] forHTTPHeaderField:@"User-Agent"];
     [request setURL:[NSURL URLWithString:imageUrl]];
     
     [self.profileImageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {

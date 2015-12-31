@@ -1,1 +1,0 @@
-../../../../JiverSDK/JiverSDK.framework/Headers/JiverMemberInMessagingChannel.h

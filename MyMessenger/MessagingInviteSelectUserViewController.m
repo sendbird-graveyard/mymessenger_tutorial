@@ -2,8 +2,8 @@
 //  MessagingInviteSelectUserViewController.m
 //  MyMessenger
 //
-//  Created by Jed Kyung on 12/10/15.
-//  Copyright © 2015 JIVER.CO. All rights reserved.
+//  Created by Inteage Developers on 12/10/15.
+//  Copyright © 2015 INTEAGE.COM. All rights reserved.
 //
 
 #import "MessagingInviteSelectUserViewController.h"
@@ -11,8 +11,8 @@
 @interface MessagingInviteSelectUserViewController ()<UITableViewDataSource, UITableViewDelegate, MessagingViewControllerDelegate> {
     NSMutableArray *userArray;
     BOOL isLoadingUser;
-    JiverMemberListQuery *memberListQuery;
-    JiverChannel *selectedChannel;
+    InteageMemberListQuery *memberListQuery;
+    InteageChannel *selectedChannel;
 }
 
 @end
@@ -40,7 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setChannel:(JiverChannel *)channel
+- (void)setChannel:(InteageChannel *)channel
 {
     selectedChannel = channel;
 }
@@ -67,7 +67,7 @@
     isLoadingUser = YES;
     
     [memberListQuery nextWithResultBlock:^(NSMutableArray *queryResult) {
-        for (JiverMember *member in queryResult) {
+        for (InteageMember *member in queryResult) {
             [userArray addObject:member];
         }
         [self.messagingInviteSelectUserTableView reloadData];
@@ -95,8 +95,8 @@
 {
     if ([indexPath section] == 0) {
         MessagingInviteSelectUserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagingInviteUserCell"];
-        JiverMember *member = (JiverMember *)[userArray objectAtIndex:[indexPath row]];
-        [cell setJiverMember:member];
+        InteageMember *member = (InteageMember *)[userArray objectAtIndex:[indexPath row]];
+        [cell setInteageMember:member];
         
         if ([indexPath row] + 1 == [userArray count]) {
             [self loadNextMemberList];
